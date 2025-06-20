@@ -149,25 +149,24 @@ console.log("Küçükten büyüğe sıralanmış sayılar:", siralisayilar);
 
 // 3f çözümü
 
-function tekraredensayilar() {
 tekraredensayilar = [];
 const tekrarSayilari = {};
-for (let i=0; i< sayilar.length; i++){
+for (let i = 0; i < sayilar.length; i++) {
   const sayi = sayilar[i];
-  if (tekrarSayilari[sayi]){
+  if (tekrarSayilari[sayi]) {
     tekrarSayilari[sayi]++;
-  }else{
+  } else {
     tekrarSayilari[sayi] = 1;
   }
 }
-for (const sayi in tekrarSayilari){
-  if (tekrarSayilari[sayi] > 1){
-    tekraredensayilar.push(`${sayi} sayısı ${tekrarSayilari[sayi]} kere tekrar edilmiştir`);
+for (const sayi in tekrarSayilari) {
+  if (tekrarSayilari[sayi] > 1) {
+    const tekrarEdilenSayi = `${sayi} sayısı ${tekrarSayilari[sayi]} kere tekrar edilmiştir`;
+    tekraredensayilar.push(tekrarEdilenSayi);
   }
 }
-  return tekraredensayilar;
-}
-console.log("Tekrarlanan sayılar:", tekrarredensayilar());
+console.log(tekraredensayilar);
+
 
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
